@@ -30,7 +30,7 @@ logs:
 	$(DC) logs --tail 100 -f --timestamps $(CONTAINER)
 
 bash:
-	$(DC) exec $(CONTAINER) bash
+	$(DC) exec $(CONTAINER) sh
 
 restart:
 	$(DC) stop $(CONTAINER)
