@@ -1,7 +1,7 @@
 include .env
 
 CONTAINER=
-DC=docker-compose
+DC=docker compose
 
 .PHONY: up down stop ps re logs
 
@@ -27,7 +27,7 @@ validator:
 	$(eval CONTAINER := validator_client)
 
 logs:
-	$(DC) logs --tail 100 -f --timestamps $(CONTAINER)
+	$(DC) logs --tail 1000 -f --timestamps $(CONTAINER)
 
 bash:
 	$(DC) exec $(CONTAINER) sh
